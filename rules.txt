@@ -1,0 +1,15 @@
+How To Play
+Guess the Wordle in 6 tries.
+
+Each guess must be a valid 5-letter word.
+How characters are displayed twill change to show how close your guess was to the word.
+Examples:
+[%GREEN% C %RESET%][%RED% O %RESET%][%RED% D %RESET%][%RED% E %RESET%][%YELLOW% R %RESET%]
+---------------------------------------------
+C is in the word and in the correct spot.
+R is in the word but in the wrong spot.
+O is not in the word in any spot.
+---------------------------------------------
+To change from interactive to simulation mode, run this again but with the -a flag.
+
+Type in your first guess:
