@@ -1,30 +1,35 @@
-import subprocess
+import sys
 from wordle import Wordle
 
 
+def play_game():
 
-def refresh_console():
-    subprocess.run(["clear"])
+    wordle = Wordle(debug=True)
+    wordle.display_rules()
 
-def main():
-
-    wordle = Wordle()
-    wordle.start()
-
-    while(wordle.guesses_left != 0 and not wordle.solved):
-
-        x = input(wordle.state_string)
-
+    while(wordle.not_done()):
+        
+        x = input()
+        
         if(not wordle.validate_guess(x)):
-            print("INVALID")
-            refresh_console()
+            wordle.newround()
             continue
 
         wordle.advance(x)
-        refresh_console()
-    
-    print(wordle.state_string)
+
     wordle.end_game()
 
+
+def simulate_game():   
+    pass
+
+def main():
+    if len(sys.argv) == 1:
+        print("Usage: python3 main.py -d [debug] -i [interractive]")
+    print(sys.flags)
+    if sys.flags.interactive:
+        play_game()
+    else:
+        simulate_game()    
 if __name__ == "__main__":
     main()
