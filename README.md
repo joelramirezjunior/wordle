@@ -82,3 +82,7 @@ Make sure you've written a valid `WordleSolver` class in `wordle_solver.py`. You
 ## Licensing & Release
 
 This repository is provided for educational use. It is open-source and may be reused or modified. The official solution is withheld until the conclusion of the ESAP program in August.
+
+## Things Left To Do
+
+Web-App interface so that it isn't limited to the terminal. Perhaps, supporting hosting various student's wordle solvers as APIs so that they can compete against each other and directly compare statistics. Just some thoughts here. 
